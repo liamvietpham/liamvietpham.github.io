@@ -4,9 +4,9 @@ import { ABOUT_ME } from "@/utils/data";
 function AboutMe() {
     return (
         <section id="about" className="container mx-auto px-8 py-16">
-            <h4 className="block lg:hidden w-[200px] section-title text-left mb-16">
+            <h2 className="block lg:hidden w-[200px] section-title text-left mb-16">
                 {ABOUT_ME.title}
-            </h4>
+            </h2>
 
             <div className="flex flex-col lg:flex-row gap-14 items-start justify-between">
                 <div className="w-[300px] md:w-[370px] h-[350px] md:h-[428px] bg-orange-100/50 rounded-3xl mx-auto">
@@ -20,9 +20,9 @@ function AboutMe() {
                 </div>
 
                 <div className="flex-1">
-                    <h4 className="hidden lg:block w-[200px] section-title text-left">
+                    <h2 className="hidden lg:block w-[200px] section-title text-left">
                         {ABOUT_ME.title}
-                    </h4>
+                    </h2>
 
                     <p className="text-sm text-justify leading-6 whitespace-pre-line mt-4">
                         {ABOUT_ME.content}
@@ -33,9 +33,11 @@ function AboutMe() {
                             <a
                                 href={item.link}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 key={item.label}
                                 className="cursor-pointer group"
+                                aria-label={item.label}
+                                title={item.label}
                             >
                                 <item.icon className="text-2xl text-secondary transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px] group-hover:text-primary" />
                             </a>

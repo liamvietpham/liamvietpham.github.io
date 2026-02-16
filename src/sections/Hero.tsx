@@ -6,9 +6,9 @@ function Hero() {
         <section id="hero" className="container mx-auto px-8">
             <div className="flex flex-col lg:flex-row gap-14 items-center justify-between mt-[80px]">
                 <div className="order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0">
-                    <h3 className="text-xl lg:text-2xl font-medium text-black">
+                    <p className="text-xl lg:text-2xl font-medium text-black">
                         {HERO.greeting}
-                    </h3>
+                    </p>
                     <h1 className="w-full lg:w-[480px] text-4xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px] mt-3 bg-gradient-primary bg-clip-text text-transparent">
                         {HERO.headline}
                     </h1>

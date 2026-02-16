@@ -10,7 +10,7 @@ function ContactMe() {
         <section id="contact">
             <div className="container mx-auto p-10">
                 <div className="w-full lg:w-[60vw] mx-auto">
-                    <h4 className="section-title">{ABOUT_ME.contactTitle}</h4>
+                    <h2 className="section-title">{ABOUT_ME.contactTitle}</h2>
 
                     <p className="text-sm text-center mt-4 leading-6">
                         {ABOUT_ME.contactIntro}
@@ -35,9 +35,7 @@ function ContactMe() {
                     </div>
 
                     <div className="">
-                        <h5 className="md:hidden text-secondary text-lg font-medium mt-4 pb-5">
-                            Contact Form
-                        </h5>
+                        <h3 className="md:hidden text-secondary text-lg font-medium mt-4 pb-5">Contact Form</h3>
                         <ContactForm recipientEmail={ABOUT_ME.email} />
                     </div>
                 </div>

@@ -34,7 +34,7 @@ function MyProjects() {
         <section id="projects" className="bg-background mt-14">
             <div className="container mx-auto px-8 md:px-10 py-10">
                 <div className="w-full lg:w-[60vw] mx-auto">
-                    <h4 className="section-title">{MY_PROJECTS.title}</h4>
+                    <h2 className="section-title">{MY_PROJECTS.title}</h2>
 
                     <p className="text-sm text-center mt-4 leading-6">
                         {MY_PROJECTS.description}

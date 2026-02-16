@@ -28,9 +28,9 @@ function TechnicalProficiency() {
         <section id="skills" className="bg-background mt-20">
             <div className="container mx-auto p-10">
                 <div className="w-full lg:w-[60vw] mx-auto">
-                    <h4 className="section-title">
+                    <h2 className="section-title">
                         {TECHNICAL_PROFICIENCY.title}
-                    </h4>
+                    </h2>
 
                     <p className="text-sm text-center mt-4 leading-6">
                         {TECHNICAL_PROFICIENCY.description}
@@ -43,7 +43,12 @@ function TechnicalProficiency() {
                     onChange={handleTabValueChange}
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 min-h-[430px]">
+                <div
+                    id="skill-tabpanel"
+                    role="tabpanel"
+                    aria-labelledby={`skill-tab-${activeTab}`}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 min-h-[430px]"
+                >
                     {tabData.map((skill, index) => (
                         <motion.div
                             key={`${activeTab}-${skill.id}`}

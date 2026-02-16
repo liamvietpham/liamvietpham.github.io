@@ -15,10 +15,20 @@ function Tabs({ tabList, activeTab, onChange }: TabsProps) {
 
     return (
         <div className="flex items-center justify-center my-10">
-            <div className="bg-[#fff6eb] rounded-full flex">
+            <div
+                className="bg-[#fff6eb] rounded-full flex"
+                role="tablist"
+                aria-label="Skill categories"
+            >
                 {tabList.map((tab) => (
                     <motion.button
                         key={tab.id}
+                        type="button"
+                        role="tab"
+                        id={`skill-tab-${tab.value}`}
+                        aria-controls="skill-tabpanel"
+                        aria-selected={activeTab === tab.value}
+                        aria-label={`Show ${tab.label} skills`}
                         initial={{ opacity: 0.8, scale: 1 }}
                         animate={{
                             opacity: activeTab === tab.value ? 1 : 0.8,

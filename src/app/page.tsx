@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -45,6 +45,6 @@ export default function Home() {
       <MyProjects />
       <ContactMe />
       <Footer />
-    </div>
+    </main>
   );
 }
