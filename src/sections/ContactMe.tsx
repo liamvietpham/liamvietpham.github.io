@@ -30,6 +30,7 @@ function ContactMe() {
                         <ContactInfoCard
                             icon={<MdOutlineWeb />}
                             text={ABOUT_ME.website}
+                            href={ABOUT_ME.website}
                         />
                     </div>
 

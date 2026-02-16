@@ -245,7 +245,7 @@ export const ABOUT_ME = {
     ],
     email: "pviet693@gmail.com",
     phone: "+84 968 250 823",
-    website: "https://liamvietpham.github.io/"
+    website: "https://liamvietpham.github.io"
 };
 
 export const MY_PROJECTS = {
