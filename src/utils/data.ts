@@ -207,7 +207,7 @@ export const TECHNICAL_PROFICIENCY = {
 
 export const ABOUT_ME = {
     title: "About Me",
-    contactTile: 'Contact Me',
+    contactTitle: "Contact Me",
     contactIntro: 'A versatile web developer with a strong background in web technologies. I have a proven track record of delivering high-quality projects on time and within budget. I am always looking for new challenges and opportunities to grow my skills.',
     content: `I am a passionate developer with a strong background in web technologies and a commitment to continuous learning. I have a proven track record of delivering high-quality projects on time and within budget. I am always looking for new challenges and opportunities to grow my skills.
     \n I have a proven track record of delivering high-quality projects on time and within budget. I am always looking for new challenges and opportunities to grow my skills. I have a proven track record of delivering high-quality projects on time and within budget. I am always looking for new challenges and opportunities to grow my skills.`,

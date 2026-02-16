@@ -1,13 +1,7 @@
-"use client";
-
 import { HERO } from "../utils/data";
 import Image from "next/image";
 
 function Hero() {
-    const handleViewResume = () => {
-        window.open(HERO.resume.url, "_blank", "noopener,noreferrer");
-    };
-
     return (
         <section id="hero" className="container mx-auto px-8">
             <div className="flex flex-col lg:flex-row gap-14 items-center justify-between mt-[80px]">
@@ -24,12 +18,14 @@ function Hero() {
                     </p>
 
                     <div className="flex justify-normal lg:justify-start gap-4 md:gap-8 mt-6">
-                        <button
-                            onClick={handleViewResume}
+                        <a
+                            href={HERO.resume.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex-1 lg:flex-none action-btn btn-scale-anim cursor-pointer"
                         >
                             {HERO.resume.viewButtonLabel}
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -40,6 +36,8 @@ function Hero() {
                         className="profile-pic"
                         width={370}
                         height={428}
+                        priority
+                        sizes="(max-width: 768px) 300px, 370px"
                     />
                     <Image
                         src="/react-icon.webp"

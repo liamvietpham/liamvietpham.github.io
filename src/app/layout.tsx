@@ -9,17 +9,48 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
     metadataBase: new URL(
-        process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+        process.env.NEXT_PUBLIC_SITE_URL ?? "https://liamvietpham.github.io"
     ),
-    title: "Liam Pham | Front-End Developer Portfolio",
+    title: {
+        default: "Liam Pham | Front-End Developer Portfolio",
+        template: "%s | Liam Pham"
+    },
     description:
-        "Liam Pham is a front-end developer specializing in responsive, accessible web interfaces.",
+        "Liam Pham is a front-end developer specializing in responsive, accessible, and high-performance web interfaces.",
+    keywords: [
+        "Liam Pham",
+        "Front-End Developer",
+        "Portfolio",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Web Developer"
+    ],
+    authors: [{ name: "Liam Pham", url: "https://liamvietpham.github.io" }],
+    creator: "Liam Pham",
+    publisher: "Liam Pham",
+    alternates: {
+        canonical: "/"
+    },
+    robots: {
+        index: true,
+        follow: true
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Liam Pham | Front-End Developer Portfolio",
+        description:
+            "Explore Liam Pham's portfolio featuring modern, responsive, and accessible front-end projects.",
+        images: ["/portfolio_website.webp"]
+    },
     openGraph: {
         title: "Liam Pham | Front-End Developer Portfolio",
         description:
-            "Explore the portfolio of Liam Pham, a front-end developer creating clean, responsive UI experiences.",
+            "Explore Liam Pham's portfolio featuring modern, responsive, and accessible front-end projects.",
         url: "/",
         siteName: "Liam Pham Portfolio",
+        locale: "en_US",
         images: [
             {
                 url: "/portfolio_website.webp",
@@ -29,7 +60,8 @@ export const metadata: Metadata = {
             }
         ],
         type: "website"
-    }
+    },
+    category: "technology"
 };
 
 export default function RootLayout({
