@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { getSiteUrl } from "@/utils/site";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -8,9 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL(
-        process.env.NEXT_PUBLIC_SITE_URL ?? "https://liamvietpham.github.io"
-    ),
+    metadataBase: new URL(getSiteUrl()),
     title: {
         default: "Liam Pham | Front-End Developer Portfolio",
         template: "%s | Liam Pham"

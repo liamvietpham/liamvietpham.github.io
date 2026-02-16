@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
+import { getSiteUrl } from "@/utils/site";
+
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl =
-        process.env.NEXT_PUBLIC_SITE_URL ?? "https://liamvietpham.github.io";
+    const baseUrl = getSiteUrl();
 
     return [
         {

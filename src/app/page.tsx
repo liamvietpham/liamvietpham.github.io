@@ -6,10 +6,10 @@ import MyProjects from "@/sections/MyProjects";
 import Navbar from "@/sections/Navbar";
 import TechnicalProficiency from "@/sections/TechnicalProficiency";
 import { ABOUT_ME } from "@/utils/data";
+import { getSiteUrl } from "@/utils/site";
 
 export default function Home() {
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://liamvietpham.github.io";
+  const siteUrl = getSiteUrl();
 
   const structuredData = {
     "@context": "https://schema.org",
