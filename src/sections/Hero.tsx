@@ -22,7 +22,7 @@ function Hero() {
                             href={HERO.resume.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 lg:flex-none action-btn btn-scale-anim cursor-pointer"
+                            className="flex items-center justify-center flex-1 lg:flex-none action-btn btn-scale-anim cursor-pointer"
                         >
                             {HERO.resume.viewButtonLabel}
                         </a>
