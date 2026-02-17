@@ -22,14 +22,14 @@ export const NAVBAR = {
     menuLinks: [
         { id: "01", label: "Home", offset: -100, to: "hero" },
         { id: "02", label: "Skills", offset: -80, to: "skills" },
-        { id: "03", label: "About Me", offset: -80, to: "about" },
+        { id: "03", label: "About", offset: -80, to: "about" },
         { id: "04", label: "Projects", offset: -80, to: "projects" },
         { id: "05", label: "Contact", offset: -80, to: "contact" }
     ],
-    logoAlt: "Logo",
+    logoAlt: "Brand",
     menuButton: {
-        openAriaLabel: "Open navigation menu",
-        closeAriaLabel: "Close navigation menu"
+        openAriaLabel: "Open menu",
+        closeAriaLabel: "Close menu"
     },
     hireMeLabel: "Hire me",
     hireMeTarget: {
@@ -39,17 +39,17 @@ export const NAVBAR = {
 };
 
 export const STATS = [
-    { id: "01", value: "10", label: "Years of \nExperience" },
-    { id: "02", value: "2", label: "Certifications \nEarned" },
-    { id: "03", value: "43", label: "Projects \nCompleted" },
+    { id: "01", value: "10", label: "Years of \nWork" },
+    { id: "02", value: "2", label: "Certificates \nCompleted" },
+    { id: "03", value: "43", label: "Projects \nDone" },
     { id: "04", value: "37+", label: "Happy \nClients" }
 ];
 
 export const HERO = {
     greeting: "Hi, I'm Liam Pham",
-    headline: "Building Scalable & User Centric Web Apps",
+    headline: "Building Scalable and User-Friendly Web Apps",
     description:
-        "I'm passionate about creating web applications that are not only functional but also user-friendly. My goal is to build scalable and efficient solutions that meet the needs of users and businesses alike.",
+        "I like building web applications that work well and are easy to use. My goal is to create scalable and simple solutions for users and business needs.",
     resume: {
         url: "/PHAM_VAN_VIET_FRONT_END_DEVELOPER.pdf",
         viewButtonLabel: "View Resume",
@@ -67,7 +67,7 @@ export const HERO = {
 export const TECHNICAL_PROFICIENCY = {
     title: "Technical Proficiency",
     description:
-        "I'm a skilled and experienced web developer with a strong background in web technologies. I have a proven track record of delivering high-quality projects on time and within budget.",
+        "I'm an experienced web developer with good knowledge of web technologies. I can deliver quality projects on time and within budget.",
     tabs: [
         { id: "01", label: "All", value: "all" },
         { id: "02", label: "Frontend", value: "frontend" },
@@ -83,7 +83,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 95,
             type: "frontend",
             description:
-                "I have extensive experience in building web applications using React JS, including state management with Redux and context API."
+                "I have a lot of experience building web apps with React JS, including state management with Redux and Context API."
         },
         {
             id: "02",
@@ -92,7 +92,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 99,
             type: "frontend",
             description:
-                "I have a strong understanding of HTML and its role in web development, ensuring semantic and accessible markup."
+                "I have strong HTML skills and I use semantic and accessible markup in web development."
         },
         {
             id: "03",
@@ -101,7 +101,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 85,
             type: "frontend",
             description:
-                "I have a strong understanding of CSS and its role in web development, ensuring responsive and visually appealing designs."
+                "I have good CSS skills and build responsive, clean, and user-friendly interfaces."
         },
         {
             id: "04",
@@ -110,7 +110,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 90,
             type: "frontend",
             description:
-                "I have a strong understanding of JavaScript and its role in web development, ensuring dynamic and interactive web applications."
+                "I have strong JavaScript skills and use it to build dynamic and interactive web applications."
         },
         {
             id: "05",
@@ -119,7 +119,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 95,
             type: "backend",
             description:
-                "I have extensive experience in building web applications using Node JS, including RESTful APIs and server-side rendering."
+                "I have good experience with Node JS, including RESTful APIs and server-side rendering."
         },
         {
             id: "06",
@@ -128,7 +128,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 98,
             type: "backend",
             description:
-                "I have extensive experience in building web applications using Express JS, including RESTful APIs and server-side rendering."
+                "I have good experience with Express JS, including RESTful APIs and backend support."
         },
         {
             id: "07",
@@ -137,7 +137,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 75,
             type: "backend",
             description:
-                "I have extensive experience in building web applications using MongoDB, including data modeling and database management."
+                "I have experience with MongoDB, including data modeling and database management."
         },
         {
             id: "08",
@@ -146,7 +146,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 80,
             type: "backend",
             description:
-                "I have extensive experience in building web applications using MySQL, including data modeling and database management."
+                "I have experience with MySQL, including data modeling and database management."
         },
         {
             id: "09",
@@ -155,7 +155,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 90,
             type: "tools",
             description:
-                "I have extensive experience in using Git for version control, including branching, merging, and resolving conflicts."
+                "I use Git for version control, including branching, merging, and solving conflicts."
         },
         {
             id: "10",
@@ -164,7 +164,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 85,
             type: "tools",
             description:
-                "I have extensive experience in using Visual Studio Code for web development, including debugging, formatting, and code completion."
+                "I use Visual Studio Code for web development, including debugging, formatting, and code completion."
         },
         {
             id: "11",
@@ -173,7 +173,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 90,
             type: "tools",
             description:
-                "I have extensive experience in using Webpack for optimizing and bundling JavaScript and CSS files."
+                "I use Webpack to optimize and bundle JavaScript and CSS for production."
         },
         {
             id: "12",
@@ -182,7 +182,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 90,
             type: "soft-skills",
             description:
-                "I have extensive experience in solving complex problems and finding efficient solutions."
+                "I can solve complex problems and find simple, effective solutions."
         },
         {
             id: "13",
@@ -191,7 +191,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 90,
             type: "soft-skills",
             description:
-                "I have extensive experience in collaborating with team members to develop and deploy web applications."
+                "I work well with team members to build, test, and deploy web applications."
         },
         {
             id: "14",
@@ -200,7 +200,7 @@ export const TECHNICAL_PROFICIENCY = {
             progress: 83,
             type: "soft-skills",
             description:
-                "I have extensive experience in paying attention to detail and ensuring that web applications are user-friendly and visually appealing."
+                "I pay attention to detail and make sure web apps are easy to use and look good."
         }
     ]
 };
@@ -208,9 +208,9 @@ export const TECHNICAL_PROFICIENCY = {
 export const ABOUT_ME = {
     title: "About Me",
     contactTitle: "Contact Me",
-    contactIntro: 'A versatile web developer with a strong background in web technologies. I have a proven track record of delivering high-quality projects on time and within budget. I am always looking for new challenges and opportunities to grow my skills.',
-    content: `I am a passionate developer with a strong background in web technologies and a commitment to continuous learning. I have a proven track record of delivering high-quality projects on time and within budget. I am always looking for new challenges and opportunities to grow my skills.
-    \n I have a proven track record of delivering high-quality projects on time and within budget. I am always looking for new challenges and opportunities to grow my skills. I have a proven track record of delivering high-quality projects on time and within budget. I am always looking for new challenges and opportunities to grow my skills.`,
+    contactIntro: 'I am a flexible web developer with a strong background in web technologies. I can deliver good projects on time and within budget. I always look for new challenges to improve my skills.',
+    content: `I am a passionate developer with a strong background in web technologies and a focus on learning. I can deliver high-quality projects on time and within budget. I always look for new challenges and chances to improve my skills.
+    \n I can deliver high-quality projects on time and within budget. I always look for new challenges and chances to improve my skills. I can deliver high-quality projects on time and within budget. I always look for new challenges and chances to improve my skills.`,
     socialLinks: [
         {
             id: "01",
@@ -251,7 +251,7 @@ export const ABOUT_ME = {
 export const MY_PROJECTS = {
     title: "Recent Projects",
     description:
-        "I'm a skilled and experienced web developer with a strong background in web technologies. I have a proven track record of delivering high-quality projects on time and within budget.",
+        "I am an experienced web developer with a strong background in web technologies. I can deliver quality projects on time and within budget.",
     items: [
         {
             id: "01",
