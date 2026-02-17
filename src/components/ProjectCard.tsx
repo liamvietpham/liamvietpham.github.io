@@ -15,6 +15,8 @@ function ProjectCard({ imgUrl, title, tags }: ProjectCardProps) {
                 className="w-full h-72 md:h-80 object-cover"
                 width={288}
                 height={288}
+                loading="lazy"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
 
             <div className="px-4 py-5">

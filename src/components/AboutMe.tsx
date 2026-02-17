@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ABOUT_ME } from "@/utils/data";
 
 function AboutMe() {
@@ -10,22 +9,25 @@ function AboutMe() {
 
             <div className="flex flex-col lg:flex-row gap-14 items-start justify-between">
                 <div className="w-75 md:w-92.5 h-87.5 md:h-107 bg-orange-100/50 rounded-3xl mx-auto relative">
-                    <Image
-                        src="/profile_pic_600x700.webp"
-                        alt="Profile picture"
-                        className="profile-pic md:hidden"
-                        width={300}
-                        height={350}
-                        priority
-                    />
-                    <Image
-                        src="/profile_pic_740x856.webp"
-                        alt="Profile picture"
-                        className="hidden md:block profile-pic"
-                        width={370}
-                        height={428}
-                        priority
-                    />
+                    <picture>
+                        <source
+                            media="(max-width: 767px)"
+                            srcSet="/profile_pic_600x700.webp"
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            srcSet="/profile_pic_740x856.webp"
+                        />
+                        <img
+                            src="/profile_pic_740x856.webp"
+                            alt="Profile picture"
+                            className="profile-pic"
+                            width={370}
+                            height={428}
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </picture>
                 </div>
 
                 <div className="flex-1">

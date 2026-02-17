@@ -1,12 +1,16 @@
 import AboutMe from "@/components/AboutMe";
-import ContactMe from "@/sections/ContactMe";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
-import MyProjects from "@/sections/MyProjects";
 import Navbar from "@/sections/Navbar";
-import TechnicalProficiency from "@/sections/TechnicalProficiency";
 import { ABOUT_ME } from "@/utils/data";
 import { getSiteUrl } from "@/utils/site";
+import dynamic from "next/dynamic";
+
+const TechnicalProficiency = dynamic(
+  () => import("@/sections/TechnicalProficiency")
+);
+const MyProjects = dynamic(() => import("@/sections/MyProjects"));
+const ContactMe = dynamic(() => import("@/sections/ContactMe"));
 
 export default function Home() {
   const siteUrl = getSiteUrl();

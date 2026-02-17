@@ -30,34 +30,34 @@ function Hero() {
                 </div>
 
                 <div className="w-75 md:w-92.5 h-87.5 md:h-107 bg-orange-100/50 rounded-3xl relative order-1 lg:order-2">
-                    <Image
-                        src="/profile_pic_600x700.webp"
-                        alt={HERO.images.profileAlt}
-                        className="profile-pic md:hidden"
-                        width={300}
-                        height={350}
-                        priority
-                        fetchPriority="high"
-                        loading="eager"
-                        sizes="300px"
-                    />
-                    <Image
-                        src="/profile_pic_740x856.webp"
-                        alt={HERO.images.profileAlt}
-                        className="hidden md:block profile-pic"
-                        width={370}
-                        height={428}
-                        priority
-                        fetchPriority="high"
-                        loading="eager"
-                        sizes="370px"
-                    />
+                    <picture>
+                        <source
+                            media="(max-width: 767px)"
+                            srcSet="/profile_pic_600x700.webp"
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            srcSet="/profile_pic_740x856.webp"
+                        />
+                        <img
+                            src="/profile_pic_740x856.webp"
+                            alt={HERO.images.profileAlt}
+                            className="profile-pic"
+                            width={370}
+                            height={428}
+                            loading="eager"
+                            fetchPriority="high"
+                            decoding="async"
+                        />
+                    </picture>
                     <Image
                         src="/react-icon.webp"
                         alt={HERO.images.reactAlt}
                         className="icon-img -left-10 bottom-20 rotate-[1.75deg]"
                         width={64}
                         height={64}
+                        loading="lazy"
+                        decoding="async"
                     />
                     <Image
                         src="/nodejs-icon.webp"
@@ -65,6 +65,8 @@ function Hero() {
                         className="icon-img left:5 md:left-10 -bottom-2 rotate-[2.75deg]"
                         width={64}
                         height={64}
+                        loading="lazy"
+                        decoding="async"
                     />
                     <Image
                         src="/html-icon.webp"
@@ -72,6 +74,8 @@ function Hero() {
                         className="icon-img left-27.5 md:left-37.5 -bottom-6 rotate-[3.75deg]"
                         width={64}
                         height={64}
+                        loading="lazy"
+                        decoding="async"
                     />
                     <Image
                         src="/js-icon.webp"
@@ -79,6 +83,8 @@ function Hero() {
                         className="icon-img left-52.5 md:left-63.75 -bottom-9 md:-bottom-10 rotate-[4.75deg]"
                         width={64}
                         height={64}
+                        loading="lazy"
+                        decoding="async"
                     />
                 </div>
             </div>
