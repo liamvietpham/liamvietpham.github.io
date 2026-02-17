@@ -47,7 +47,7 @@ function MyProjects() {
                             {MY_PROJECTS.items.map((project) => (
                                 <div
                                     key={project.id}
-                                    className="min-w-[100%] sm:min-w-[50%] lg:min-w-[33%]"
+                                    className="min-w-full sm:min-w-[50%] lg:min-w-[33%]"
                                 >
                                     <ProjectCard
                                         imgUrl={project.image}

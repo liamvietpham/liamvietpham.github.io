@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Liam Pham Portfolio
 
-## Getting Started
+This is a personal portfolio website built with Next.js.
 
-First, run the development server:
+Live site: [https://liamvietpham.github.io](https://liamvietpham.github.io)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- Responsive portfolio layout
+- Smooth scroll navigation
+- Skills tabs with simple animation
+- Project carousel
+- Contact form with validation
+- Resume view/download
+- SEO metadata, sitemap, robots.txt, and structured data
+- Accessibility improvements (landmarks, labels, heading order, contrast fixes)
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Embla Carousel
+- React Icons
+
+## Project Structure
+
+```text
+src/
+  app/          # App Router pages, layout, global styles, SEO routes
+  sections/     # Page sections (Hero, Navbar, Projects, etc.)
+  components/   # Reusable UI components
+  utils/        # Static data and helpers
+public/         # Images, favicon, resume PDF
+.github/workflows/deploy-pages.yml  # GitHub Pages CI/CD
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Requirements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 20.9+ (recommended: latest Node 20 LTS)
+- Yarn
 
-## Learn More
+### Run
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn install
+yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+```bash
+yarn dev    # Run local dev server
+yarn build  # Create production build (static export)
+yarn start  # Start production server
+yarn lint   # Run ESLint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment (GitHub Pages)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is configured for static export:
+
+- `output: "export"` in `next.config.ts`
+- GitHub Actions workflow builds and deploys from `out/`
+
+Workflow file:
+
+- `.github/workflows/deploy-pages.yml`
+
+### Base Path Behavior
+
+The workflow sets `BASE_PATH` automatically:
+
+- If repository is `username.github.io`: base path is empty
+- If repository is `project-name`: base path is `/project-name`
+
+## Notes
+
+- `next/image` runs in unoptimized mode because GitHub Pages has no Next image server.
+- Static content is managed in `src/utils/data.ts`.
