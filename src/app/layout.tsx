@@ -45,6 +45,14 @@ export const metadata: Metadata = {
             "Explore Liam Pham's portfolio featuring modern, responsive, and accessible front-end projects.",
         images: ["/portfolio_website.webp"]
     },
+    icons: {
+        icon: [
+            { url: "/favicon.ico" },
+            { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" }
+        ],
+        shortcut: ["/favicon.ico"],
+        apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }]
+    },
     openGraph: {
         title: "Liam Pham | Front-End Developer Portfolio",
         description:
