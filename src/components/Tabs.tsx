@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 type TabsProps = {
     tabList: { id: string; label: string; value: string }[];
     activeTab: string;
@@ -21,7 +19,7 @@ function Tabs({ tabList, activeTab, onChange }: TabsProps) {
                 aria-label="Skill categories"
             >
                 {tabList.map((tab) => (
-                    <motion.button
+                    <button
                         key={tab.id}
                         type="button"
                         role="tab"
@@ -29,18 +27,15 @@ function Tabs({ tabList, activeTab, onChange }: TabsProps) {
                         aria-controls="skill-tabpanel"
                         aria-selected={activeTab === tab.value}
                         aria-label={`Show ${tab.label} skills`}
-                        initial={{ scale: 1 }}
-                        animate={{
-                            scale: activeTab === tab.value ? 1.05 : 1
-                        }}
-                        transition={{ duration: 0.2 }}
                         className={`text-xs md:text-[15px] ${getActiveStyles(
                             tab.value
-                        )} rounded-full px-4 md:px-10 py-[6px] md:py-3 cursor-pointer`}
+                        )} rounded-full px-4 md:px-10 py-1.5 md:py-3 cursor-pointer transition-transform duration-200 ${
+                            activeTab === tab.value ? "scale-105" : "scale-100"
+                        }`}
                         onClick={() => onChange(tab.value)}
                     >
                         {tab.label}
-                    </motion.button>
+                    </button>
                 ))}
             </div>
         </div>

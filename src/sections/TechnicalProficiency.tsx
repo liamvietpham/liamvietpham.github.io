@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { TECHNICAL_PROFICIENCY } from "../utils/data";
-import { motion } from "framer-motion";
 import Tabs from "@/components/Tabs";
 import SkillCard from "@/components/SkillCard";
 
@@ -50,11 +49,10 @@ function TechnicalProficiency() {
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 min-h-[430px]"
                 >
                     {tabData.map((skill, index) => (
-                        <motion.div
+                        <div
                             key={`${activeTab}-${skill.id}`}
-                            initial={{ y: 20 }}
-                            animate={{ y: 0 }}
-                            transition={{ duration: 0.4, delay: index * 0.1 }}
+                            className="card-reveal"
+                            style={{ animationDelay: `${index * 60}ms` }}
                         >
                             <SkillCard
                                 icon={
@@ -64,7 +62,7 @@ function TechnicalProficiency() {
                                 description={skill.description}
                                 progress={skill.progress}
                             />
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

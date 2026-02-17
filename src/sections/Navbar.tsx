@@ -1,15 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Link } from "react-scroll";
+import { type MouseEvent, useEffect, useState } from "react";
 import { NAVBAR } from "../utils/data";
 import Image from "next/image";
+import Link from "next/link";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const smoothScrollTo = (targetTop: number, duration = 800) => {
+        const startTop = window.scrollY;
+        const distance = targetTop - startTop;
+        const startTime = performance.now();
+
+        const easeInOutQuint = (t: number) =>
+            t < 0.5
+                ? 16 * t * t * t * t * t
+                : 1 - Math.pow(-2 * t + 2, 5) / 2;
+
+        const animate = (currentTime: number) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeInOutQuint(progress);
+
+            window.scrollTo(0, startTop + distance * easedProgress);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(animate);
+            }
+        };
+
+        window.requestAnimationFrame(animate);
     };
 
     useEffect(() => {
@@ -32,6 +57,24 @@ function Navbar() {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
+
+    const handleAnchorClick = (
+        event: MouseEvent<HTMLAnchorElement>,
+        sectionId: string,
+        offset: number
+    ) => {
+        const targetElement = document.getElementById(sectionId);
+        if (!targetElement) return;
+
+        event.preventDefault();
+        const top =
+            targetElement.getBoundingClientRect().top + window.scrollY + offset;
+
+        smoothScrollTo(top);
+        if (window.innerWidth <= 768) {
+            setIsOpen(false);
+        }
+    };
 
     return (
         <nav className="container mx-auto sticky top-5 z-10">
@@ -90,13 +133,15 @@ function Navbar() {
                     {NAVBAR.menuLinks.map((link) => (
                         <li key={link.id} className="menu-item">
                             <Link
-                                activeClass="active"
-                                to={link.to}
-                                spy={true}
-                                smooth={true}
-                                offset={link.offset}
                                 href={`/#${link.to}`}
                                 className="menu-item"
+                                onClick={(event) =>
+                                    handleAnchorClick(
+                                        event,
+                                        link.to,
+                                        link.offset
+                                    )
+                                }
                             >
                                 {link.label}
                             </Link>
@@ -106,13 +151,15 @@ function Navbar() {
 
                 {/* Hire me button */}
                 <Link
-                    activeClass="active"
-                    to={NAVBAR.hireMeTarget.to}
-                    spy={true}
-                    smooth={true}
-                    offset={NAVBAR.hireMeTarget.offset}
                     href={`/#${NAVBAR.hireMeTarget.to}`}
                     className="hidden md:flex items-center justify-center h-12 text-[15px] font-medium text-white bg-gradient-primary rounded-full px-9 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
+                    onClick={(event) =>
+                        handleAnchorClick(
+                            event,
+                            NAVBAR.hireMeTarget.to,
+                            NAVBAR.hireMeTarget.offset
+                        )
+                    }
                 >
                     {NAVBAR.hireMeLabel}
                 </Link>
