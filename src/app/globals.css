@@ -15,7 +15,14 @@
 
 @layer base {
     html {
-        font-family: "Poppins", sans-serif;
+        font-family:
+            "SF Pro Text",
+            "SF Pro Display",
+            "Segoe UI",
+            Roboto,
+            "Helvetica Neue",
+            Arial,
+            sans-serif;
     }
 
     body {
