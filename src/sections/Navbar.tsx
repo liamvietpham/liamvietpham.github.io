@@ -6,7 +6,7 @@ import { NAVBAR } from "../utils/data";
 import Image from "next/image";
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);

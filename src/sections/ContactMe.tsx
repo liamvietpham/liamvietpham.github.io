@@ -35,7 +35,7 @@ function ContactMe() {
                     </div>
 
                     <div className="">
-                        <h3 className="md:hidden text-secondary text-lg font-medium mt-4 pb-5">Contact Form</h3>
+                        <h3 className="md:hidden text-[#6B3526] text-lg font-medium mt-4 pb-5">Contact Form</h3>
                         <ContactForm recipientEmail={ABOUT_ME.email} />
                     </div>
                 </div>
