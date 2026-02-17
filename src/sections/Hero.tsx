@@ -4,16 +4,16 @@ import Image from "next/image";
 function Hero() {
     return (
         <section id="hero" className="container mx-auto px-8">
-            <div className="flex flex-col lg:flex-row gap-14 items-center justify-between mt-[80px]">
+            <div className="flex flex-col lg:flex-row gap-14 items-center justify-between mt-20">
                 <div className="order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0">
                     <p className="text-xl lg:text-2xl font-medium text-black">
                         {HERO.greeting}
                     </p>
-                    <h1 className="w-full lg:w-[480px] text-4xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px] mt-3 bg-gradient-primary bg-clip-text text-transparent">
+                    <h1 className="w-full lg:w-120 text-4xl lg:text-5xl font-bold leading-12.5 lg:leading-15 mt-3 bg-gradient-primary bg-clip-text text-transparent">
                         {HERO.headline}
                     </h1>
 
-                    <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4">
+                    <p className="w-full lg:w-125 text-sm lg:text-base mt-4">
                         {HERO.description}
                     </p>
 
@@ -29,15 +29,28 @@ function Hero() {
                     </div>
                 </div>
 
-                <div className="w-[300px] md:w-[370px] h-[350px] md:h-[428px] bg-orange-100/50 rounded-3xl relative order-1 lg:order-2">
+                <div className="w-75 md:w-92.5 h-87.5 md:h-107 bg-orange-100/50 rounded-3xl relative order-1 lg:order-2">
                     <Image
-                        src="/profile_pic.webp"
+                        src="/profile_pic_600x700.webp"
                         alt={HERO.images.profileAlt}
-                        className="profile-pic"
+                        className="profile-pic md:hidden"
+                        width={300}
+                        height={350}
+                        priority
+                        fetchPriority="high"
+                        loading="eager"
+                        sizes="300px"
+                    />
+                    <Image
+                        src="/profile_pic_740x856.webp"
+                        alt={HERO.images.profileAlt}
+                        className="hidden md:block profile-pic"
                         width={370}
                         height={428}
                         priority
-                        sizes="(max-width: 768px) 300px, 370px"
+                        fetchPriority="high"
+                        loading="eager"
+                        sizes="370px"
                     />
                     <Image
                         src="/react-icon.webp"
@@ -56,14 +69,14 @@ function Hero() {
                     <Image
                         src="/html-icon.webp"
                         alt={HERO.images.htmlAlt}
-                        className="icon-img left-[110px] md:left-[150px] -bottom-6 rotate-[3.75deg]"
+                        className="icon-img left-27.5 md:left-37.5 -bottom-6 rotate-[3.75deg]"
                         width={64}
                         height={64}
                     />
                     <Image
                         src="/js-icon.webp"
                         alt={HERO.images.jsAlt}
-                        className="icon-img left-[210px] md:left-[255px] -bottom-9 md:-bottom-10 rotate-[4.75deg]"
+                        className="icon-img left-52.5 md:left-63.75 -bottom-9 md:-bottom-10 rotate-[4.75deg]"
                         width={64}
                         height={64}
                     />

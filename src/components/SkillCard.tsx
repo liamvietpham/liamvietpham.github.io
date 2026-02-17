@@ -20,7 +20,7 @@ function SkillCard({ icon, skillName, description, progress }: SkillCardProps) {
                         <p className="text-[13px] text-black font-medium">
                             {skillName}
                         </p>
-                        <p className="text-xs text-secondary font-medium">
+                        <p className="text-xs text-[#6B3526] font-medium">
                             {progress} %
                         </p>
                     </div>
@@ -34,7 +34,7 @@ function SkillCard({ icon, skillName, description, progress }: SkillCardProps) {
                 </div>
             </div>
 
-            <p className="text-xs text-gray-600 text-justify leading-5 mt-2">
+            <p className="text-xs text-[#3F3F46] text-justify leading-5 mt-2">
                 {description}
             </p>
         </div>

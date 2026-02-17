@@ -1,12 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { NAVBAR } from "../utils/data";
 import Image from "next/image";
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                setIsOpen(true);
+            } else {
+                setIsOpen(false);
+            }
+        };
+
+        // Initial check to set menu state based on screen size
+        handleResize();
+
+        // Add event listener for window resize
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
         <nav className="container mx-auto sticky top-5 z-10">
@@ -23,7 +48,7 @@ function Navbar() {
                 {/* Hamburger Icon (Visible only on small screens) */}
                 <button
                     className="block md:hidden text-[#333] mr-6 focus:outline-none"
-                    onClick={() => setIsOpen((prev) => !prev)}
+                    onClick={toggleMenu}
                     aria-label={
                         isOpen
                             ? NAVBAR.menuButton.closeAriaLabel
@@ -70,8 +95,8 @@ function Navbar() {
                                 spy={true}
                                 smooth={true}
                                 offset={link.offset}
+                                href={`/#${link.to}`}
                                 className="menu-item"
-                                onClick={() => setIsOpen(false)}
                             >
                                 {link.label}
                             </Link>
@@ -86,6 +111,7 @@ function Navbar() {
                     spy={true}
                     smooth={true}
                     offset={NAVBAR.hireMeTarget.offset}
+                    href={`/#${NAVBAR.hireMeTarget.to}`}
                     className="hidden md:flex items-center justify-center h-12 text-[15px] font-medium text-white bg-gradient-primary rounded-full px-9 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
                 >
                     {NAVBAR.hireMeLabel}

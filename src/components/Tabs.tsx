@@ -10,7 +10,7 @@ function Tabs({ tabList, activeTab, onChange }: TabsProps) {
     const getActiveStyles = (value: string) => {
         return activeTab === value
             ? "text-white bg-gradient-primary"
-            : "text-secondary bg-transparent";
+            : "text-[#7A3D2C] bg-transparent";
     };
 
     return (
@@ -29,9 +29,8 @@ function Tabs({ tabList, activeTab, onChange }: TabsProps) {
                         aria-controls="skill-tabpanel"
                         aria-selected={activeTab === tab.value}
                         aria-label={`Show ${tab.label} skills`}
-                        initial={{ opacity: 0.8, scale: 1 }}
+                        initial={{ scale: 1 }}
                         animate={{
-                            opacity: activeTab === tab.value ? 1 : 0.8,
                             scale: activeTab === tab.value ? 1.05 : 1
                         }}
                         transition={{ duration: 0.2 }}

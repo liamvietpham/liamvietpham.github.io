@@ -52,8 +52,8 @@ function TechnicalProficiency() {
                     {tabData.map((skill, index) => (
                         <motion.div
                             key={`${activeTab}-${skill.id}`}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ y: 20 }}
+                            animate={{ y: 0 }}
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                         >
                             <SkillCard

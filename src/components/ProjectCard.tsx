@@ -25,7 +25,7 @@ function ProjectCard({ imgUrl, title, tags }: ProjectCardProps) {
                     {tags.map((tag) => (
                         <span
                             key={tag}
-                            className="text-xs text-secondary bg-orange-100 px-3 py-1 rounded-full"
+                            className="text-xs text-[#6B3526] bg-orange-100 px-3 py-1 rounded-full"
                         >
                             {tag}
                         </span>

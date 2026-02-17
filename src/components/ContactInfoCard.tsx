@@ -16,12 +16,12 @@ function ContactInfoCard({ icon, text, href }: ContactInfoCardProps) {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary text-xs md:text-sm"
+                    className="text-[#6B3526] text-xs md:text-sm"
                 >
                     {text}
                 </a>
             ) : (
-                <p className="text-secondary text-xs md:text-sm">{text}</p>
+                <p className="text-[#6B3526] text-xs md:text-sm">{text}</p>
             )}
         </div>
     );
