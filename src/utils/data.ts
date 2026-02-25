@@ -255,33 +255,23 @@ export const MY_PROJECTS = {
     items: [
         {
             id: "01",
-            title: "E-commerce Website",
-            image: "/portfolio_website.webp",
-            tags: ["React", "Express.js", "Node.js", "MongoDB"]
+            title: "Portfolio Website",
+            description:
+                "Personal portfolio built with smooth navigation, responsive sections, and reusable UI components.",
+            image: "/portfolio-thumb.webp",
+            tags: ["NextJS", "Tailwind CSS", "Typescript"],
+            liveUrl: "https://liamvietpham.github.io",
+            githubUrl: "https://github.com/liamvietpham/liamvietpham.github.io"
         },
         {
             id: "02",
-            title: "Portfolio Website",
-            image: "/portfolio_website.webp",
-            tags: ["React", "Tailwind CSS", "Typescript"]
+            title: "ThumbgenAI Website",
+            description:
+                "Landing page and dashboard concept for an AI thumbnail product with modern visual storytelling.",
+            image: "/thumbgenai-thumb.webp",
+            tags: ["NextJS", "NestJS", "MongoDB", "Typescript", "Tailwind CSS"],
+            liveUrl: "https://thumbgenai-web.vercel.app",
+            githubUrl: "https://github.com/liamvietpham/thumbgenai"
         },
-        {
-            id: "03",
-            title: "Social Media App",
-            image: "/portfolio_website.webp",
-            tags: ["React", "Express.js", "Node.js", "MongoDB"]
-        },
-        {
-            id: "04",
-            title: "Blog Website",
-            image: "/portfolio_website.webp",
-            tags: ["HTML", "CSS", "JavaScript"]
-        },
-        {
-            id: "05",
-            title: "Weather App",
-            image: "/portfolio_website.webp",
-            tags: ["React", "API"]
-        }
     ]
 };

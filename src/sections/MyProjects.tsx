@@ -13,22 +13,34 @@ function MyProjects() {
     });
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(false);
+    const [isScrollable, setIsScrollable] = useState(false);
 
-    const updateScrollButtons = useCallback(() => {
+    const updateCarouselState = useCallback(() => {
         if (!emblaApi) return;
+
+        const hasScrollableContent =
+            emblaApi.scrollSnapList().length > 1 &&
+            (emblaApi.canScrollPrev() || emblaApi.canScrollNext());
+
+        setIsScrollable(hasScrollableContent);
         setCanScrollPrev(emblaApi.canScrollPrev());
         setCanScrollNext(emblaApi.canScrollNext());
     }, [emblaApi]);
 
     useEffect(() => {
         if (!emblaApi) return;
-        emblaApi.on("select", updateScrollButtons);
-        updateScrollButtons();
+
+        emblaApi.on("select", updateCarouselState);
+        emblaApi.on("reInit", updateCarouselState);
+        emblaApi.on("resize", updateCarouselState);
+        updateCarouselState();
 
         return () => {
-            emblaApi.off("select", updateScrollButtons);
+            emblaApi.off("select", updateCarouselState);
+            emblaApi.off("reInit", updateCarouselState);
+            emblaApi.off("resize", updateCarouselState);
         };
-    }, [emblaApi, updateScrollButtons]);
+    }, [emblaApi, updateCarouselState]);
 
     return (
         <section id="projects" className="bg-background mt-14">
@@ -47,40 +59,46 @@ function MyProjects() {
                             {MY_PROJECTS.items.map((project) => (
                                 <div
                                     key={project.id}
-                                    className="min-w-full sm:min-w-[50%] lg:min-w-[33%]"
+                                    className="min-w-[86%] sm:min-w-[46%] lg:min-w-[30%]"
                                 >
                                     <ProjectCard
                                         imgUrl={project.image}
                                         title={project.title}
+                                        description={project.description}
                                         tags={project.tags}
+                                        liveUrl={project.liveUrl}
+                                        githubUrl={project.githubUrl}
                                     />
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    {/* Navigation Buttons */}
-                    <button
-                        className={`arrow-btn -left-5 cursor-pointer ${
-                            !canScrollPrev ? "opacity-50" : ""
-                        }`}
-                        onClick={() => emblaApi?.scrollPrev()}
-                        aria-label={`Scroll Previous ${MY_PROJECTS.items.length}`}
-                        disabled={!canScrollPrev}
-                    >
-                        <IoIosArrowForward className="rotate-180" />
-                    </button>
+                    {isScrollable && (
+                        <>
+                            <button
+                                className={`arrow-btn -left-5 cursor-pointer ${
+                                    !canScrollPrev ? "opacity-50" : ""
+                                }`}
+                                onClick={() => emblaApi?.scrollPrev()}
+                                aria-label={`Scroll Previous ${MY_PROJECTS.items.length}`}
+                                disabled={!canScrollPrev}
+                            >
+                                <IoIosArrowForward className="rotate-180" />
+                            </button>
 
-                    <button
-                        className={`arrow-btn -right-5 cursor-pointer ${
-                            !canScrollNext ? "opacity-50" : ""
-                        }`}
-                        onClick={() => emblaApi?.scrollNext()}
-                        aria-label={`Scroll Next ${MY_PROJECTS.items.length}`}
-                        disabled={!canScrollNext}
-                    >
-                        <IoIosArrowForward />
-                    </button>
+                            <button
+                                className={`arrow-btn -right-5 cursor-pointer ${
+                                    !canScrollNext ? "opacity-50" : ""
+                                }`}
+                                onClick={() => emblaApi?.scrollNext()}
+                                aria-label={`Scroll Next ${MY_PROJECTS.items.length}`}
+                                disabled={!canScrollNext}
+                            >
+                                <IoIosArrowForward />
+                            </button>
+                        </>
+                    )}
                 </div>
             </div>
         </section>
