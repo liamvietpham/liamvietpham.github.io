@@ -222,25 +222,25 @@ export const ABOUT_ME = {
             id: "02",
             label: "Instagram",
             icon: FaInstagram,
-            link: "https://www.instagram.com/phamviet3050"
+            link: "https://www.instagram.com/liamvietpham"
         },
         {
             id: "03",
             label: "LinkedIn",
             icon: FaLinkedin,
-            link: "https://www.linkedin.com/in/liampham03051999"
+            link: "https://www.linkedin.com/in/liamvietpham"
         },
         {
             id: "04",
             label: "GitHub",
             icon: FaGithubAlt,
-            link: "https://github.com/pviet693"
+            link: "https://github.com/liamvietpham"
         },
         {
             id: "05",
             label: "Twitter",
             icon: FaXTwitter,
-            link: "https://twitter.com/liampham3050"
+            link: "https://twitter.com/liamvietpham"
         }
     ],
     email: "pviet693@gmail.com",
