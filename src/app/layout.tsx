@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         title: "Liam Pham | Front-End Developer Portfolio",
         description:
             "Explore Liam Pham's portfolio featuring modern, responsive, and accessible front-end projects.",
-        images: ["/portfolio_website.webp"]
+        images: ["/og-image.webp"]
     },
     icons: {
         icon: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         locale: "en_US",
         images: [
             {
-                url: "/portfolio_website.webp",
+                url: "/og-image.webp",
                 width: 1200,
                 height: 630,
                 alt: "Liam Pham Front-End Developer Portfolio"
