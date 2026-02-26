@@ -18,12 +18,12 @@ function ProjectCard({
     githubUrl
 }: ProjectCardProps) {
     return (
-        <div className="h-full max-w-85 bg-white rounded-xl overflow-hidden shadow-md mx-2 flex flex-col">
+        <div className="group h-full max-w-85 bg-white rounded-xl overflow-hidden shadow-md mx-2 flex flex-col">
             <div className="relative">
                 <Image
                     src={imgUrl}
                     alt={title}
-                    className="w-full h-56 md:h-64 object-cover"
+                    className="w-full h-56 md:h-64 object-cover transition-transform duration-300 ease-out group-hover:scale-105"
                     width={288}
                     height={288}
                     loading="lazy"

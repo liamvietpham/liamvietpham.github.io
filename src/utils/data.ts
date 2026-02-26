@@ -249,7 +249,7 @@ export const ABOUT_ME = {
 };
 
 export const MY_PROJECTS = {
-    title: "Recent Projects",
+    title: "Personal Projects",
     description:
         "I am an experienced web developer with a strong background in web technologies. I can deliver quality projects on time and within budget.",
     items: [
