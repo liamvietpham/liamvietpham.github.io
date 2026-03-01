@@ -273,5 +273,14 @@ export const MY_PROJECTS = {
             liveUrl: "https://thumbgenai-web.vercel.app",
             githubUrl: "https://github.com/liamvietpham/thumbgenai"
         },
+        {
+            id: "03",
+            title: "Sapo Solar Website",
+            description:
+                "Corporate e-commerce website for showcasing solar products, energy solutions, and featured projects.",
+            image: "/saposolar-thumb.webp",
+            tags: ["NextJS", "NestJS", "Postgres", "Typescript", "Tailwind CSS"],
+            liveUrl: "https://www.saposolar.vn/"
+        },
     ]
 };
