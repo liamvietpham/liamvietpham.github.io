@@ -260,7 +260,7 @@ export const MY_PROJECTS = {
                 "Landing page and dashboard concept for an AI thumbnail product with conversion-focused storytelling and polished UI.",
             image: "/thumbgenai-thumb.webp",
             tags: ["NextJS", "NestJS", "DynamoDB", "Typescript", "Tailwind CSS", "Lambda", "S3", "SQS", "CloudFront"],
-            liveUrl: "https://thumbgenai-web.vercel.app",
+            liveUrl: "https://thumbgenai-gilt.vercel.app/",
             githubUrl: "https://github.com/liamvietpham/thumbgenai"
         },
         {
