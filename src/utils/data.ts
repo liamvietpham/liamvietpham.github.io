@@ -255,6 +255,34 @@ export const MY_PROJECTS = {
     items: [
         {
             id: "01",
+            title: "ThumbgenAI Website",
+            description:
+                "Landing page and dashboard concept for an AI thumbnail product with modern visual storytelling.",
+            image: "/thumbgenai-thumb.webp",
+            tags: ["NextJS", "NestJS", "DynamoDB", "Typescript", "Tailwind CSS", "Lambda", "S3", "SQS", "CloudFront"],
+            liveUrl: "https://thumbgenai-web.vercel.app",
+            githubUrl: "https://github.com/liamvietpham/thumbgenai"
+        },
+        {
+            id: "02",
+            title: "Imagegen Website",
+            description:
+                "AI image generator with Next.js frontend, NestJS backend, and FAL AI integration.",
+            image: "/imagegen-thumb.webp",
+            tags: ["NextJS", "NestJS", "Postgres", "Typescript", "Tailwind CSS", "Lambda", "S3", "CloudFront"],
+            liveUrl: "https://www.imagegen.space/"
+        },
+        {
+            id: "03",
+            title: "OnlineToolbox Website",
+            description:
+                "Premium SEO-first online toolbox with free browser-based tools for text, dev, SEO, image, PDF, and content tasks.",
+            image: "/online-toolbox-thumb.webp",
+            tags: ["NextJS", "Typescript", "Tailwind CSS"],
+            liveUrl: "https://onlinetoolbox.space/"
+        },
+        {
+            id: "05",
             title: "Portfolio Website",
             description:
                 "Personal portfolio built with smooth navigation, responsive sections, and reusable UI components.",
@@ -264,17 +292,7 @@ export const MY_PROJECTS = {
             githubUrl: "https://github.com/liamvietpham/liamvietpham.github.io"
         },
         {
-            id: "02",
-            title: "ThumbgenAI Website",
-            description:
-                "Landing page and dashboard concept for an AI thumbnail product with modern visual storytelling.",
-            image: "/thumbgenai-thumb.webp",
-            tags: ["NextJS", "NestJS", "MongoDB", "Typescript", "Tailwind CSS"],
-            liveUrl: "https://thumbgenai-web.vercel.app",
-            githubUrl: "https://github.com/liamvietpham/thumbgenai"
-        },
-        {
-            id: "03",
+            id: "06",
             title: "Sapo Solar Website",
             description:
                 "Corporate e-commerce website for showcasing solar products, energy solutions, and featured projects.",
