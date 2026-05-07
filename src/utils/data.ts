@@ -47,9 +47,9 @@ export const STATS = [
 
 export const HERO = {
     greeting: "Hi, I'm Liam Pham",
-    headline: "Building Scalable and User-Friendly Web Apps",
+    headline: "Front-End Developer Building React and Next.js Web Apps",
     description:
-        "I like building web applications that work well and are easy to use. My goal is to create scalable and simple solutions for users and business needs.",
+        "I build responsive, accessible, SEO-friendly websites and web applications with React, Next.js, TypeScript, and Tailwind CSS. My focus is fast performance, clean UI, and business-ready user experiences.",
     resume: {
         url: "/PHAM_VAN_VIET_FRONT_END_DEVELOPER.pdf",
         viewButtonLabel: "View Resume",
@@ -67,7 +67,7 @@ export const HERO = {
 export const TECHNICAL_PROFICIENCY = {
     title: "Technical Proficiency",
     description:
-        "I'm an experienced web developer with good knowledge of web technologies. I can deliver quality projects on time and within budget.",
+        "I build modern front-end and full-stack web experiences with React, Next.js, TypeScript, Node.js, Express, MongoDB, and MySQL. My focus is semantic HTML, responsive design, accessibility, performance, and maintainable code.",
     tabs: [
         { id: "01", label: "All", value: "all" },
         { id: "02", label: "Frontend", value: "frontend" },
@@ -208,9 +208,9 @@ export const TECHNICAL_PROFICIENCY = {
 export const ABOUT_ME = {
     title: "About Me",
     contactTitle: "Contact Me",
-    contactIntro: 'I am a flexible web developer with a strong background in web technologies. I can deliver good projects on time and within budget. I always look for new challenges to improve my skills.',
-    content: `I am a passionate developer with a strong background in web technologies and a focus on learning. I can deliver high-quality projects on time and within budget. I always look for new challenges and chances to improve my skills.
-    \n I can deliver high-quality projects on time and within budget. I always look for new challenges and chances to improve my skills. I can deliver high-quality projects on time and within budget. I always look for new challenges and chances to improve my skills.`,
+    contactIntro: "I am a front-end developer focused on React, Next.js, and TypeScript. I build responsive interfaces, SEO-friendly landing pages, and web apps that balance performance with usability.",
+    content: `I am a front-end developer with a strong background in React, Next.js, and TypeScript. I build responsive interfaces, SEO-friendly landing pages, and web applications that balance performance with usability.
+    \n I enjoy turning product ideas into clean, scalable experiences and improving them through accessibility, maintainability, and user feedback.`,
     socialLinks: [
         {
             id: "01",
@@ -251,13 +251,13 @@ export const ABOUT_ME = {
 export const MY_PROJECTS = {
     title: "Personal Projects",
     description:
-        "I am an experienced web developer with a strong background in web technologies. I can deliver quality projects on time and within budget.",
+        "Selected front-end, full-stack, and SEO-focused web projects built with Next.js, React, TypeScript, and modern UI patterns.",
     items: [
         {
             id: "01",
             title: "ThumbgenAI Website",
             description:
-                "Landing page and dashboard concept for an AI thumbnail product with modern visual storytelling.",
+                "Landing page and dashboard concept for an AI thumbnail product with conversion-focused storytelling and polished UI.",
             image: "/thumbgenai-thumb.webp",
             tags: ["NextJS", "NestJS", "DynamoDB", "Typescript", "Tailwind CSS", "Lambda", "S3", "SQS", "CloudFront"],
             liveUrl: "https://thumbgenai-web.vercel.app",
@@ -267,7 +267,7 @@ export const MY_PROJECTS = {
             id: "02",
             title: "Imagegen Website",
             description:
-                "AI image generator with Next.js frontend, NestJS backend, and FAL AI integration.",
+                "AI image generator web app with a Next.js frontend, NestJS backend, and FAL AI integration for a fast modern experience.",
             image: "/imagegen-thumb.webp",
             tags: ["NextJS", "NestJS", "Postgres", "Typescript", "Tailwind CSS", "Lambda", "S3", "CloudFront"],
             liveUrl: "https://www.imagegen.space/"
@@ -276,7 +276,7 @@ export const MY_PROJECTS = {
             id: "03",
             title: "OnlineToolbox Website",
             description:
-                "Premium SEO-first online toolbox with free browser-based tools for text, dev, SEO, image, PDF, and content tasks.",
+                "SEO-first online toolbox with free browser-based tools for text, dev, SEO, image, PDF, and content workflows.",
             image: "/online-toolbox-thumb.webp",
             tags: ["NextJS", "Typescript", "Tailwind CSS"],
             liveUrl: "https://onlinetoolbox.space/"
@@ -285,7 +285,7 @@ export const MY_PROJECTS = {
             id: "05",
             title: "Portfolio Website",
             description:
-                "Personal portfolio built with smooth navigation, responsive sections, and reusable UI components.",
+                "Personal portfolio website built with Next.js, responsive design, smooth navigation, and reusable UI components.",
             image: "/portfolio-thumb.webp",
             tags: ["NextJS", "Tailwind CSS", "Typescript"],
             liveUrl: "https://liamvietpham.github.io",

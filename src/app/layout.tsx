@@ -13,21 +13,30 @@ const poppins = Poppins({
 export const metadata: Metadata = {
     metadataBase: new URL(getSiteUrl()),
     title: {
-        default: "Liam Pham | Front-End Developer Portfolio",
+        default: "Liam Pham | Front-End Developer, React & Next.js Portfolio",
         template: "%s | Liam Pham"
     },
     description:
-        "Liam Pham is a front-end developer specializing in responsive, accessible, and high-performance web interfaces.",
+        "Liam Pham is a front-end developer building responsive, accessible, SEO-friendly websites and web applications with React, Next.js, TypeScript, and Tailwind CSS.",
     keywords: [
         "Liam Pham",
-        "Front-End Developer",
-        "Portfolio",
+        "Front-End Developer Portfolio",
+        "React Developer",
+        "Next.js Developer",
+        "TypeScript Developer",
+        "Frontend Engineer",
         "React",
         "Next.js",
         "TypeScript",
         "Tailwind CSS",
-        "Web Developer"
+        "Web Developer",
+        "Responsive Web Design",
+        "SEO Friendly Website",
+        "Accessible Web Apps",
+        "Freelance Front-End Developer",
+        "Vietnam Front-End Developer"
     ],
+    applicationName: "Liam Pham Portfolio",
     authors: [{ name: "Liam Pham", url: "https://liamvietpham.github.io" }],
     creator: "Liam Pham",
     publisher: "Liam Pham",
@@ -36,13 +45,20 @@ export const metadata: Metadata = {
     },
     robots: {
         index: true,
-        follow: true
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1
+        }
     },
     twitter: {
         card: "summary_large_image",
-        title: "Liam Pham | Front-End Developer Portfolio",
+        title: "Liam Pham | Front-End Developer, React & Next.js Portfolio",
         description:
-            "Explore Liam Pham's portfolio featuring modern, responsive, and accessible front-end projects.",
+            "Explore Liam Pham's portfolio of responsive, accessible, SEO-friendly front-end projects built with React and Next.js.",
         images: ["/og-image.webp"]
     },
     icons: {
@@ -54,10 +70,10 @@ export const metadata: Metadata = {
         apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }]
     },
     openGraph: {
-        title: "Liam Pham | Front-End Developer Portfolio",
+        title: "Liam Pham | Front-End Developer, React & Next.js Portfolio",
         description:
-            "Explore Liam Pham's portfolio featuring modern, responsive, and accessible front-end projects.",
-        url: "/",
+            "Explore Liam Pham's portfolio of responsive, accessible, SEO-friendly front-end projects built with React and Next.js.",
+        url: getSiteUrl(),
         siteName: "Liam Pham Portfolio",
         locale: "en_US",
         images: [

@@ -24,14 +24,28 @@ export default function Home() {
         url: siteUrl,
         email: ABOUT_ME.email,
         sameAs: ABOUT_ME.socialLinks.map((item) => item.link),
-        jobTitle: "Front-End Developer"
+        jobTitle: "Front-End Developer",
+        description:
+          "Front-end developer focused on React, Next.js, TypeScript, SEO-friendly websites, and responsive web applications.",
+        knowsAbout: [
+          "Front-End Development",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Responsive Web Design",
+          "SEO",
+          "Accessibility",
+          "Web Performance"
+        ]
       },
       {
         "@type": "WebSite",
         name: "Liam Pham Portfolio",
         url: siteUrl,
         description:
-          "Portfolio of Liam Pham, front-end developer building responsive and accessible web applications."
+          "Portfolio of Liam Pham, a front-end developer building responsive, accessible, SEO-friendly web applications with React and Next.js.",
+        inLanguage: "en-US"
       }
     ]
   };
